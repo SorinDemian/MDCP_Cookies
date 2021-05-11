@@ -9,7 +9,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 <button onclick="alertCookie()">Show cookies</button>
 
 <script> 
-  document.cookie = "web_driver=" + navigator.webDriver; 
+  document.cookie = "color_depth=" + window.screen.colorDepth; 
   document.cookie = "user_agent="+ navigator.userAgent; 
   function alertCookie() { 
   alert(document.cookie); 
