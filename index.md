@@ -9,7 +9,8 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 <button onclick="alertCookie()">Show cookies</button> <br>
 <button onclick="alertCookieValue()">Show cookie colorDepth</button> <br>
 <button onclick="doOnce()">Only once</button> <br>
-<button onclick="resetOnce()">Reset only once cookie</button>
+<button onclick="resetOnce()">Reset only once cookie</button> <br>
+<button onclick="checkExists()">color_depth?</button>
 
 <script> 
   document.cookie = "color_depth=" + window.screen.colorDepth; 
@@ -37,6 +38,13 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
   
   function resetOnce() {
     document.cookie = "oneTime=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  }
+  
+  function checkExists(){
+  if (document.cookie.split(';').some((item) => item.trim().startsWith('color_depth='))) {
+    console.log('The cookie "color_depth" exists (ES6)')
+    alert('The cookie "color_depth" exists (ES6)');
+    }
   }
   
 </script>
