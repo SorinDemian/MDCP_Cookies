@@ -6,12 +6,13 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Cookies
 
-<button onclick="alertCookie()">Show cookies</button>
-<button onclick="alertCookieValue()">Show cookie value</button>
+<button onclick="alertCookie()">Show cookies</button> <br>
+<button onclick="alertCookieValue()">Show cookie colorDepth</button> <br>
+<button onclick="doOnce()">Only do something once</button>
 
 <script> 
   document.cookie = "color_depth=" + window.screen.colorDepth; 
-  document.cookie = "user_agent="+ navigator.userAgent; 
+  document.cookie = "user_agent=" + navigator.userAgent; 
   
   const cookieValue = document.cookie
   .split('; ')
@@ -21,8 +22,16 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
   function alertCookie() { 
     alert(document.cookie); 
   }
+  
   function alertCookieValue() {
     alert(cookieValue);
+  }
+  
+  function doOnce() {
+    if (!document.cookie.split('; ').find(row => row.startsWith('endOfTime'))) {
+      alert("Do something here!");
+      document.cookie = "endOfTime=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    }
   }
 </script>
 
