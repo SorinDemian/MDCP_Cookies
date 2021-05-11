@@ -6,7 +6,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Cookies
 
-Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button>
+<button onclick="alertCookie()">Show cookies</button>
 
 <script> 
   document.cookie = "session=test GDPR"; 
