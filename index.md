@@ -4,6 +4,18 @@ You can use the [editor on GitHub](https://github.com/ssepty10/MDCP_Cookies/edit
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+### Cookies
+
+Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button>
+
+<script> 
+  document.cookie = "session=test GDPR"; 
+  document.cookie = "favorite_task=collect Data"; 
+  function alertCookie() { 
+  alert(document.cookie); 
+  } 
+</script>
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
