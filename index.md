@@ -10,7 +10,8 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 <button onclick="alertCookieValue()">Show cookie colorDepth</button> <br>
 <button onclick="doOnce()">Only once</button> <br>
 <button onclick="resetOnce()">Reset only once cookie</button> <br>
-<button onclick="checkExists()">color_depth?</button>
+<button onclick="checkExists()">oneTime exists?</button> <br>
+<button onclick="isTheValue()">colorDepth = 24?</button>
 
 <script> 
   document.cookie = "color_depth=" + window.screen.colorDepth; 
@@ -41,12 +42,22 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
   }
   
   function checkExists(){
-   if (document.cookie.split(';').some((item) => item.trim().startsWith('color_depth='))) {
-      console.log('The cookie "color_depth" exists (ES6)')
-      alert('The cookie "color_depth" exists (ES6)');
+   if (document.cookie.split(';').some((item) => item.trim().startsWith('oneTime='))) {
+      console.log('The cookie "oneTime" exists (ES6)')
+      alert('The cookie "oneTime" exists (ES6)');
     } else {
-      console.log('The cookie "color_depth" does not exist (ES6)')
-      alert('The cookie "color_depth" does not exist (ES6)');
+      console.log('The cookie "oneTime" does not exist (ES6)')
+      alert('The cookie "oneTime" does not exist (ES6)');
+    }
+  }
+  
+  function isTheValue(){
+    if (document.cookie.split(';').some((item) => item.includes('color_depth=24'))) {
+      console.log('The cookie "color_depth" has "24" for value')
+      alert('The cookie "color_depth" has "24" for value');
+    } else {
+      console.log('The cookie "color_depth" does not have "24" for value')
+      alert('The cookie "color_depth" does not have "24" for value');
     }
   }
   
