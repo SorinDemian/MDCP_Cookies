@@ -8,7 +8,8 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 <button onclick="alertCookie()">Show cookies</button> <br>
 <button onclick="alertCookieValue()">Show cookie colorDepth</button> <br>
-<button onclick="doOnce()">Only do something once</button>
+<button onclick="doOnce()">Only once</button> <br>
+<button onclick="resetOnce()">Reset only once cookie</button>
 
 <script> 
   document.cookie = "color_depth=" + window.screen.colorDepth; 
@@ -28,11 +29,16 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
   }
   
   function doOnce() {
-    if (!document.cookie.split('; ').find(row => row.startsWith('endOfTime'))) {
-      alert("Do something here!");
-      document.cookie = "endOfTime=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    if (!document.cookie.split('; ').find(row => row.startsWith('oneTime'))) {
+      alert("~One time offer~");
+      document.cookie = "oneTime=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
+  
+  function resetOnce() {
+    document.cookie = "oneTime=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  }
+  
 </script>
 
 ### Markdown
