@@ -41,9 +41,12 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
   }
   
   function checkExists(){
-  if (document.cookie.split(';').some((item) => item.trim().startsWith('color_depth='))) {
-    console.log('The cookie "color_depth" exists (ES6)')
-    alert('The cookie "color_depth" exists (ES6)');
+   if (document.cookie.split(';').some((item) => item.trim().startsWith('color_depth='))) {
+      console.log('The cookie "color_depth" exists (ES6)')
+      alert('The cookie "color_depth" exists (ES6)');
+    } else {
+      console.log('The cookie "color_depth" does not exist (ES6)')
+      alert('The cookie "color_depth" does not exist (ES6)');
     }
   }
   
