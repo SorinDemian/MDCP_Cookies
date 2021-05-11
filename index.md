@@ -7,13 +7,23 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ### Cookies
 
 <button onclick="alertCookie()">Show cookies</button>
+<button onclick="alertCookieValue()">Show cookie value</button>
 
 <script> 
   document.cookie = "color_depth=" + window.screen.colorDepth; 
   document.cookie = "user_agent="+ navigator.userAgent; 
+  
+  const cookieValue = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('color_depth='))
+  .split('=')[1];
+  
   function alertCookie() { 
-  alert(document.cookie); 
-  } 
+    alert(document.cookie); 
+  }
+  function alertCookieValue() {
+    alert(cookieValue);
+  }
 </script>
 
 ### Markdown
