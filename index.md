@@ -174,15 +174,15 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
  
   function doOnceExam() {
     if (!document.cookie.split('; ').find(row => row.startsWith('exam_browser_version'))) {
-      alert("Only once");
+      alert('Only once');
       document.cookie = "exam_browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
       document.cookie = "exam_user_name=" + <%=Session["UserName"] %> + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
   
   function resetOnceExam() {
-    document.cookie = "browser_version=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    document.cookie = "user_name=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "exam_browser_version=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "exam_user_name=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   }
  
 
