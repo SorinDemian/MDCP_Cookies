@@ -1,5 +1,11 @@
 ## Welcome to Septimiu Samartineanu's GitHub Page
 
+
+#Cookie activitate practica
+
+<button onclick="doOnceExam()">Exam: Only once</button> <br>
+<button onclick="resetOnceExam()">Exam: Reset only once cookie</button> <br>
+
 Nota de informare:
 
 NOTĂ DE INFORMARE privind prelucrarea datelor cu caracter personal efectuată de către UNIVERSITATEA TEHNICA DIN CLUJ-NAPOCA
@@ -110,16 +116,6 @@ Prelucrările de date speciale sau întemeiate pe consimțământ
 Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”persoana vizată și-a dat consimțământul pentru prelucrarea datelor sale cu caracter personal pentru unul sau mai multe scopuri specifice” sau pe articolul 9 alineatul (2) litera (a) ”persoana vizată și-a dat consimțământul explicit pentru prelucrarea acestor date cu caracter personal pentru unul sau mai multe scopuri specifice, cu excepția cazului în care dreptul Uniunii sau dreptul intern prevede ca interdicția prevăzută la alineatul (1) să nu poată fi ridicată prin consimțământul persoanei vizate” din GDPR, aveți dreptul de a vă retrage consimțământul în orice moment, fără a afecta legalitatea prelucrării efectuate pe baza consimțământului înainte de retragerea acestuia. Astfel, puteți modifica sau elimina consimțământul în orice moment, și vom acționa imediat în consecință, cu excepția cazului în care există un motiv legal sau un interes legitim pentru a nu face acest lucru.
 
 
-
-### Cookies
-
-<button onclick="alertCookie()">Show cookies</button> <br>
-<button onclick="alertCookieValue()">Show cookie colorDepth</button> <br>
-<button onclick="doOnce()">Only once</button> <br>
-<button onclick="resetOnce()">Reset only once cookie</button> <br>
-<button onclick="checkExists()">oneTime exists?</button> <br>
-<button onclick="isTheValue()">colorDepth = 24?</button>
-
 <script> 
   document.cookie = "color_depth=" + window.screen.colorDepth; 
   document.cookie = "user_agent=" + navigator.userAgent; 
@@ -139,7 +135,7 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
   
   function doOnce() {
     if (!document.cookie.split('; ').find(row => row.startsWith('oneTime'))) {
-      alert("~One time offer~");
+      alert("One time offer");
       document.cookie = "oneTime=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
@@ -167,6 +163,20 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
       alert('The cookie "color_depth" does not have "24" for value');
     }
   }
+ 
+ 
+  function doOnceExam() {
+    if (!document.cookie.split('; ').find(row => row.startsWith('browser_version'))) {
+      alert("Only once");
+      document.cookie = "browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    }
+  }
+  
+  function resetOnceExam() {
+    document.cookie = "browser_version=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  }
+ 
+
   
 </script>
 
@@ -191,5 +201,13 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
+### Cookies activitate laborator
+
+<button onclick="alertCookie()">Show cookies</button> <br>
+<button onclick="alertCookieValue()">Show cookie colorDepth</button> <br>
+<button onclick="doOnce()">Only once</button> <br>
+<button onclick="resetOnce()">Reset only once cookie</button> <br>
+<button onclick="checkExists()">oneTime exists?</button> <br>
+<button onclick="isTheValue()">colorDepth = 24?</button>
 
 You can use the [editor on GitHub](https://github.com/ssepty10/MDCP_Cookies/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
