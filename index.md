@@ -4,6 +4,7 @@
 ### Cookie activitate practica
 
 Doar cookie-urile cu exam ca prefix sunt cele cerute, restul si butoanele de la finalul paginii sunt cele create la sesiuniile de laborator. <br>
+
 <button onclick="doOnceExam()">Exam: Only once</button> <br>
 <button onclick="resetOnceExam()">Exam: Reset only once cookie</button> <br>
 
@@ -176,7 +177,7 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
     if (!document.cookie.split('; ').find(row => row.startsWith('exam_browser_version'))) {
       alert('Only once');
       document.cookie = "exam_browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-      document.cookie = "exam_user_name=" + <%=Session["UserName"] %> + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      document.cookie = "exam_user_name= serban; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
   
