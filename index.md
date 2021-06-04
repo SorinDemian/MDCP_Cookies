@@ -181,7 +181,7 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
   
   function resetOnceExam() {
     document.cookie = "browser_version=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    document.cookie = "user_name=; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie = "user_name=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   }
  
 
