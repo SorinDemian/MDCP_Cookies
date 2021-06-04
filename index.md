@@ -3,6 +3,7 @@
 
 ### Cookie activitate practica
 
+Doar cookie-urile cu exam ca prefix sunt cele cerute, restul si butoanele de la finalul paginii sunt cele create la sesiuniile de laborator.
 <button onclick="doOnceExam()">Exam: Only once</button> <br>
 <button onclick="resetOnceExam()">Exam: Reset only once cookie</button> <br>
 
@@ -175,7 +176,7 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
     if (!document.cookie.split('; ').find(row => row.startsWith('exam_browser_version'))) {
       alert("Only once");
       document.cookie = "exam_browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-      document.cookie = "exam_user_name=" + HttpContext.Current.User.Identity.Name + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      document.cookie = "exam_user_name=" + <%=Session["UserName"] %> + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
   
@@ -188,27 +189,6 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
   
 </script>
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
 ### Cookies activitate laborator
 
 <button onclick="alertCookie()">Show cookies</button> <br>
@@ -217,5 +197,3 @@ Syntax highlighted code block
 <button onclick="resetOnce()">Reset only once cookie</button> <br>
 <button onclick="checkExists()">oneTime exists?</button> <br>
 <button onclick="isTheValue()">colorDepth = 24?</button>
-
-You can use the [editor on GitHub](https://github.com/ssepty10/MDCP_Cookies/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
