@@ -166,10 +166,10 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
  
  
   function doOnceExam() {
-    if (!document.cookie.split('; ').find(row => row.startsWith('browser_version'))) {
+    if (!document.cookie.split('; ').find(row => row.startsWith('exam_browser_version'))) {
       alert("Only once");
-      document.cookie = "browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-      document.cookie = "user_name=" + Page.User.Identity.Name + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      document.cookie = "exam_browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      document.cookie = "exam_user_name=" + <%: HttpContext.Current.User.Identity.Name %> + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
   
