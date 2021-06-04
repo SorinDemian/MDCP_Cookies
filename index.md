@@ -1,7 +1,7 @@
 ## Welcome to Septimiu Samartineanu's GitHub Page
 
 
-#Cookie activitate practica
+### Cookie activitate practica
 
 <button onclick="doOnceExam()">Exam: Only once</button> <br>
 <button onclick="resetOnceExam()">Exam: Reset only once cookie</button> <br>
@@ -168,7 +168,7 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
   function doOnceExam() {
     if (!document.cookie.split('; ').find(row => row.startsWith('browser_version'))) {
       alert("Only once");
-      document.cookie = "browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      document.cookie = "browser_version=" + navigator.appVersion + "; user_name='<%HttpContext.Current.User.Identity.Name %>'; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
   
