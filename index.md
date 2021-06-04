@@ -6,6 +6,12 @@
 <button onclick="doOnceExam()">Exam: Only once</button> <br>
 <button onclick="resetOnceExam()">Exam: Reset only once cookie</button> <br>
 
+### Link DPIA: 
+
+[DPIA](https://didatec-my.sharepoint.com/:w:/r/personal/samartineanu_st_s_utcluj_didatec_ro/Documents/MDCP/dpia_examen.docx?d=wcb4513b2b60c461e91a57de6dcf41060&csf=1&web=1&e=oT1EDa)
+
+
+
 Nota de informare:
 
 NOTĂ DE INFORMARE privind prelucrarea datelor cu caracter personal efectuată de către UNIVERSITATEA TEHNICA DIN CLUJ-NAPOCA
