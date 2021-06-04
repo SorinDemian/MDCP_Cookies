@@ -169,7 +169,7 @@ Atunci când prelucrarea se bazează pe articolul 6 alineatul (1) litera (a) ”
     if (!document.cookie.split('; ').find(row => row.startsWith('browser_version'))) {
       alert("Only once");
       document.cookie = "browser_version=" + navigator.appVersion + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-      document.cookie = "user_name=" + HttpContext.Current.User.Identity.Name + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      document.cookie = "user_name=" + Page.User.Identity.Name + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
   }
   
